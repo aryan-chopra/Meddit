@@ -4,6 +4,7 @@
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 4fr 1fr;
+    row-gap: 5em;
 }
 
 .header
@@ -19,6 +20,8 @@
 
 .logo
 {
+    display: block;
+    margin-left: 0.5em;
 }
 
 .search-box
@@ -43,6 +46,21 @@
     justify-self: center;
 }
 
+.navigator
+{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 0.5em;
+}
+
+.nav-community
+{
+    margin-bottom: 30px;
+    flex-shrink: 0;
+}
+
 .content
 {   
     grid-row-start: 2;
@@ -52,21 +70,49 @@
     justify-self: center;
 }
 
-.navigator
-{
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-.nav-community
-{
-    margin-bottom: 30px;
-}
-
-.extra
+.notification-bar
 {
     grid-row-start: 2;
     grid-column-start: 3;
+}
+
+.notification-heading
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.notification-heading-icon
+{
+    height: 1.4em;
+    margin-bottom: 15px;
+}
+
+.notifications-menu
+{
+    margin-top: 2em;
+}
+
+.notification-tile
+{
+    display: flex;   
+    column-gap: 1em;
+    margin-bottom: 2em;
+}
+
+.notification-icon
+{
+    height: 2em;
+}
+
+.notification-content
+{
+    align-self: center;
+}
+
+.notification-unread
+{
+    font-weight: 600;
 }
