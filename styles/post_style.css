@@ -13,14 +13,18 @@ p
 
 .visible-post
 {
+    background-color: white;
     display: flex;
     flex-direction: column;    
-    max-height: 30vh;
+    max-height: 40vh;
     gap: 1em;
     width: 50vw;
-    border: 1px solid black;
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
     border-radius: 10px;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+    cursor: pointer;
 }
 
 .post-community
@@ -28,15 +32,21 @@ p
     flex-shrink: 0;
     flex-basis: 1.2em;
     padding-left: 1em;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 .community-container
 {
+    padding: 0.5em;
     display: flex;
     align-items: center;
     column-gap: 1em;
 }
+.community-container:hover .visible-post-community-name
+{
+    color: blue;
+}
+
 
 .visible-post-community-image
 {
@@ -60,9 +70,13 @@ p
 
 .visible-post-desciption
 {
+    /* white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; */
     padding-top: 0.8em;
     font-size: 0.9em;
     font-family: roboto;
+    font-weight: 350;
 }
 
 .visible-post-footer
@@ -71,13 +85,15 @@ p
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    flex-basis: 1.8em;
+    flex-basis: 2em;
     gap: 1em;
     padding-right: 2em;
-    border-top: 1px solid black;
+    padding-bottom: 0.4em;
+    margin-bottom: 4px;
+    /* border-top: 1px solid black; */
 }
 
 .vote
 {
-    height: 1em;
+    height: 1.3em;
 }
