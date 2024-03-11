@@ -4,64 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/post_style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="main-page">
-        <div class="header">
-            <h1 class="logo"> Meddit </h1>
-            <div class="search-box">
-                <img class="search-icon" src="resources/search_icon.svg" alt="">
-                <p class="seach-text">Type here bucado</p>
-            </div>
-            <div class="account">
-                <img src="resources/profile.svg" alt="">
-            </div>
+        <h1 class="logo"> Meddit </h1>
+        <div class="search-box">
+            <img class="search-icon" src="resources/search_icon.svg" alt="">
+            <input class="search-text" type="search" placeholder="Type here to search...">
+        </div>
+        <div class="account">
+            <img src="resources/profile.svg" alt="">
         </div>
 
-        <div class="navigator">
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
+        <div class="scrollable-div navigator">
+            <div class="nav-item-container nav-tabs-container">
+                <div class="hover-item community-container nav-item">
+                    <img class="nav-tab-img" src="resources/home.svg" alt="">
+                    <p class="visible-post-community-name">Home</p>
+                </div>
+                <div class="hover-item community-container nav-item">
+                    <img class="nav-tab-img" src="resources/trending.svg" alt="">
+                    <p class="visible-post-community-name">Trending</p>
+                </div>
+                <div class="hover-item community-container nav-item">
+                    <img class="nav-tab-img" src="resources/forYou.svg" alt="">
+                    <p class="visible-post-community-name">For You</p>
+                </div>
             </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
-            </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
-            </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
-            </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
-            </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
-            </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
-            </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
-            </div>
-            <div class="nav-community community-container">
-                <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
-                <p class="visible-post-community-name">community_name</p>
+            <!-- communities -->
+            <div class="nav-item-container nav-communities-container">
+                <div class="nav-item hover-item first-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="nav-item hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
+                <div class="hover-item nav-item nav-community community-container">
+                    <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
+                    <p class="visible-post-community-name">community_name</p>
+                </div>
             </div>
         </div>
         
-        <div class="content">
-            <div class="visible-post">
+        <div class="scrollable-div content">
+            <div class="first-item visible-post">
                 <div class="post-community community-container">
                     <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
                     <p class="visible-post-community-name">community_name</p>
@@ -138,7 +153,7 @@
         </div>
 
         <div class="notification-bar">
-            <div class="notification-heading">
+            <div class="first-item notification-heading">
                 <img class="notification-heading-icon" src="resources/notification.png" alt="">
             </div>
             <div class="notifications-menu">
@@ -168,6 +183,7 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="test-div"></div> -->
     </div>
 </body>
 </html>
