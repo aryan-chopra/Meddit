@@ -13,7 +13,7 @@ p
 
 .visible-post
 {
-    background-color: white;
+    background-color: var(--bg);
     display: flex;
     flex-direction: column;    
     max-height: 40vh;
@@ -63,7 +63,6 @@ p
 
 .visible-post-title
 {
-    font-family: roboto;
     font-size: 1.4em;
     font-weight: 500;
 }
@@ -75,7 +74,6 @@ p
     overflow: hidden;
     padding-top: 0.8em;
     font-size: 0.9em;
-    font-family: roboto;
     font-weight: 350;
 }
 

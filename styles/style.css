@@ -1,3 +1,13 @@
+:root
+{
+    --border-color: var(--accent-200);
+}
+
+*
+{
+    color: var(--text-950);
+}
+
 html, body
 {
     margin: 0;
@@ -7,7 +17,8 @@ html, body
 
 body
 {
-    font-family: roboto;
+    font-family: poppins;
+    background-color: var(--bg);
 }
 
 .main-page
@@ -31,7 +42,7 @@ body
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    background-color: #f4f6fb;
+    background-color: var(--secondary-50);
     justify-self: center;
     width: 50vw;
     display: flex;
@@ -100,7 +111,7 @@ body
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid;
 }
 
 .nav-item-container
@@ -117,7 +128,7 @@ body
 .nav-tabs-container
 {
     padding-bottom: 1.5em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-tab-img
@@ -145,7 +156,7 @@ body
 
 .content
 {   
-    background-color: #f4f6fb;
+    background-color: var(--primary-50);
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -170,7 +181,7 @@ body
 
 .scrollable-div:hover.scrollable-div::-webkit-scrollbar-thumb
 {
-    background-color: #d6dee1;
+    background-color: var(--accent-100);
 }
 
 .right-bar
@@ -184,7 +195,7 @@ body
 
 .account-container
 {
-    background-color: #f4f6fb;
+    background-color: var(--secondary-50);
     border-radius: 25px;
     /* margin-top: 1em; */
     margin-right: 1em;
@@ -260,7 +271,7 @@ body
     margin-top: 0.8em;
     max-height: 20vh;
     overflow: scroll;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .notification-tile
@@ -280,7 +291,7 @@ body
 
 .notification-unread
 {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .first-item
@@ -292,7 +303,14 @@ body
 {
     cursor: pointer;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.05);
+    /* background-color: rgba(0, 0, 0, 0.05); */
+    background-color: var(--accent-50);
+}
+
+.hover-item:active
+{
+    border-radius: 10px;
+    background-color: var(--primary-300);
 }
 
 ::-webkit-scrollbar {
@@ -304,7 +322,7 @@ body
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
+    background-color: var(--accent-200);
     border-radius: 20px;
     border: 6px solid transparent;
     background-clip: content-box;
