@@ -11,15 +11,20 @@
 <body>
     <div class="main-page">
         <h1 class="logo"> Meddit </h1>
+
         <div class="search-box">
             <img class="search-icon" src="resources/search_icon.svg" alt="">
             <input class="search-text" type="search" placeholder="Type here to search...">
         </div>
-        <div class="account">
-            <img src="resources/profile.svg" alt="">
+        
+        <div class="actions-container">
+            <div class="create-post-icon-container">
+                <img class="header-image" src="resources/create_post.svg" alt="">
+            </div>
+            <img class="header-image" src="resources/test_account_images/account_one.png" alt="">
         </div>
 
-        <div class="scrollable-div navigator">
+        <div class="navigator">
             <div class="nav-item-container nav-tabs-container">
                 <div class="hover-item community-container nav-item">
                     <img class="nav-tab-img" src="resources/home.svg" alt="">
@@ -35,7 +40,7 @@
                 </div>
             </div>
             <!-- communities -->
-            <div class="nav-item-container nav-communities-container">
+            <div class="scrollable-div nav-item-container nav-communities-container">
                 <div class="nav-item hover-item first-item nav-community community-container">
                     <img class="visible-post-community-image" src="../resources/5ef4c9420ffc1d618658fd1bec7db821.jpg" alt="">
                     <p class="visible-post-community-name">community_name</p>
@@ -152,34 +157,96 @@
             </div>
         </div>
 
-        <div class="notification-bar">
-            <div class="first-item notification-heading">
-                <img class="notification-heading-icon" src="resources/notification.png" alt="">
+        <div class="right-bar">
+            <div class="account-container">
+                <div class="account-image-name-container community-container">
+                    <img class="account-image" src="resources/test_account_images/account_one.png" alt="">
+                    <div class="name-username-container">
+                        <p class="account-name">Full Name</p>
+                        <p class="light-text">@username</p>
+                    </div>
+                </div>
+                <div class="account-stats-container">
+                    <div class="stat">
+                        <p class="stat-value">5K</p>
+                        <p class="stat-name light-text">Followers</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-value">5K</p>
+                        <p class="stat-name light-text">Followers</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-value">5K</p>
+                        <p class="stat-name light-text">Followers</p>
+                    </div>
+                </div>
             </div>
             <div class="notifications-menu">
-                <div class="notification-tile">
-                    <img class="notification-icon" src="resources/test_account_images/account_one.png" alt="">
-                    <p class="notification-unread notification-content">1 new message</p>
+                <div class="first-item notification-heading">
+                    <img class="notification-heading-icon" src="resources/chat_icon.svg" alt="">
+                    <p class="light-text">Friends</p>
                 </div>
+                <div class="scrollable-div notificaton-section-container">
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/account_one.png" alt="">
+                        <p class="notification-unread notification-content">1 new message</p>
+                    </div>
 
-                <div class="notification-tile">
-                    <img class="notification-icon" src="resources/test_account_images/account_three.png" alt="">
-                    <p class="notification-unread notification-content">1 new message</p>
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/account_three.png" alt="">
+                        <p class="notification-unread notification-content">1 new message</p>
+                    </div>
+
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/account_two.png" alt="">
+                        <p class="notification-read notification-content">1 new message</p>
+                    </div>
+
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/account_two.png" alt="">
+                        <p class="notification-read notification-content">1 new message</p>
+                    </div>
+
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/account_three.png" alt="">
+                        <p class="notification-unread notification-content">1 new message</p>
+                    </div>
+
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/account_one.png" alt="">
+                        <p class="notification-unread notification-content">1 new message</p>
+                    </div>
                 </div>
+                <div class="scrollable-div notificaton-section-container">
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/community_one.png" alt="">
+                        <p class="notification-unread notification-content">1 new post</p>
+                    </div>
 
-                <div class="notification-tile">
-                    <img class="notification-icon" src="resources/test_account_images/account_two.png" alt="">
-                    <p class="notification-read notification-content">1 new message</p>
-                </div>
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/community_two.png" alt="">
+                        <p class="notification-read notification-content">1 new post</p>
+                    </div>
 
-                <div class="notification-tile">
-                    <img class="notification-icon" src="resources/test_account_images/community_one.png" alt="">
-                    <p class="notification-unread notification-content">1 new post</p>
-                </div>
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/community_two.png" alt="">
+                        <p class="notification-read notification-content">1 new post</p>
+                    </div>
 
-                <div class="notification-tile">
-                    <img class="notification-icon" src="resources/test_account_images/community_two.png" alt="">
-                    <p class="notification-read notification-content">1 new post</p>
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/community_two.png" alt="">
+                        <p class="notification-read notification-content">1 new post</p>
+                    </div>
+
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/community_two.png" alt="">
+                        <p class="notification-read notification-content">1 new post</p>
+                    </div>
+
+                    <div class="hover-item community-container notification-tile">
+                        <img class="notification-icon" src="resources/test_account_images/community_two.png" alt="">
+                        <p class="notification-read notification-content">1 new post</p>
+                    </div>
                 </div>
             </div>
         </div>
