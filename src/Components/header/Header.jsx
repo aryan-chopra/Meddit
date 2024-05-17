@@ -29,7 +29,9 @@ function Header({userImg}){
   function Actions({accountImg}){
     return(
       <div className='actions-container'>
+        <Link to='/create-post'>
         <ButtonPost text={"Create Post"}/>
+        </Link>
         <Link to='/authentication/sign-in'>  
         <ButtonPost text={"Log Out"}/>
         </Link>

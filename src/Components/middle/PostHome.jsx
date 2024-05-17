@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import UserContext from '../../contexts/UserContext'
 
 const PostHome = () => {
-  const {setCommunityMiddle, setCommunity,setCommunityDisplay} = useContext(UserContext);
+  const {setCommunityMiddle, setCommunity} = useContext(UserContext);
   const communityData = [
     {
       commImg:'./resources/community_icon.svg',

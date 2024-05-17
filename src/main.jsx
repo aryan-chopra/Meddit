@@ -8,7 +8,7 @@ import Login from './Components/authentication/Login';
 import Auth from './Components/authentication/Auth';
 import SignUp from './Components/authentication/Signup';
 import PostDisplay from './Components/postDisplay/PostDisplay';
-import createPost from './Components/createPost/createPost';
+import CreatePost from './Components/createPost/CreatePost';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,12 +19,13 @@ root.render(
           <Route path="" element={<PostHome />} />
           <Route path={`Community-Profile`} element={<CommunityPageHeader />} />
           <Route path="PostDisplay" element={<PostDisplay />} />
+          <Route path="/createPost" element={<createPost/>}/>
         </Route>
         <Route path="/authentication" element={<Auth/>}>
           <Route path='sign-in' element={<Login/>}/>
           <Route path='sign-up' element={<SignUp/>}/>
         </Route>
-        <Route path='/create-post' element={<createPost/>}/>
+        <Route path='/create-post' element={<CreatePost/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
