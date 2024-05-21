@@ -8,7 +8,7 @@ import Login from './Components/authentication/Login';
 import Auth from './Components/authentication/Auth';
 import SignUp from './Components/authentication/Signup';
 import PostDisplay from './Components/postDisplay/PostDisplay';
-import CreatePost from './Components/createPost/CreatePost';
+import CreatePost from './Components/createPost/createPost';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
