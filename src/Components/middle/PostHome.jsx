@@ -135,6 +135,7 @@ import { Link } from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
 
 const PostHome = () => {
+  const {setCommunityMiddle, setCommunity} = useContext(UserContext);
   const { setCommunityMiddle, setCommunity } = useContext(UserContext);
   const communityData = [
     {

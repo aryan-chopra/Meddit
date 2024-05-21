@@ -1,0 +1,97 @@
+p
+{
+    margin: 0px;
+}
+
+
+.post-container
+{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.visible-post
+{
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;    
+    max-height: 40vh;
+    gap: 1em;
+    width: 50vw;
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    border-radius: 25px;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.post-community
+{
+    flex-shrink: 0;
+    flex-basis: 1.2em;
+    padding-left: 1em;
+    /* border-bottom: 1px solid black; */
+}
+
+.community-container
+{
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+.community-container:hover .visible-post-community-name
+{
+    color: blue;
+}
+
+
+.visible-post-community-image
+{
+    height: 1.8em;
+}
+
+.visible-post-content-container
+{
+    flex-shrink: 1;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    overflow: hidden;
+}
+
+.visible-post-title
+{
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.visible-post-desciption
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-top: 0.8em;
+    font-size: 0.9em;
+    font-weight: 350;
+}
+
+.visible-post-footer
+{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-basis: 2em;
+    gap: 1em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+    margin-bottom: 4px;
+    /* border-top: 1px solid black; */
+}
+
+.vote
+{
+    height: 1.3em;
+}

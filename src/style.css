@@ -29,7 +29,7 @@ body
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 6fr;
-    grid-template-columns: 0.8fr 3fr 1.1fr;
+    grid-template-columns:  .8fr 3fr 1.1fr;
 }
 
 .logo
@@ -37,6 +37,7 @@ body
     margin-top: 1em;
     justify-self: center;
     height: 5vh;
+    width: 100px;
 }
 
 .search-box
@@ -47,7 +48,7 @@ body
     grid-column-end: 3;
     background-color: var(--secondary-50);
     justify-self: center;
-    width: 50vw;
+    width:40vw;
     display: flex;
     flex-direction: row;
     height: fit-content;
@@ -178,6 +179,8 @@ body
     overflow-x: hidden;
     border-radius: 15px;
     padding-top: 3vh;
+    /* justify-content: center; */
+    /* justify-items: center; */
     /* border-left: 1px solid rgba(0, 0, 0, 0.2); */
     /* border-right: 1px solid rgba(0, 0, 0, 0.2); */
 }
@@ -357,4 +360,34 @@ body
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
+}
+
+@media (width < 1024px){
+    .navigator{
+        display: none !important;
+    }
+
+    .content{
+        grid-column-start: 1;
+    }
+}
+
+@media (width < 768px) {
+    .search-box {
+        width: 30vw;
+    }
+
+    .right-bar {
+        display: none;
+    }
+
+    .content{
+        grid-column-end: 4;
+    }
+}
+
+@media (width < 375) {
+    .main-page {
+        justify-items: start;
+    }
 }

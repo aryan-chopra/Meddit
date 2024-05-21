@@ -9,12 +9,15 @@ p
     font-size: 16px;
     display: flex;
     justify-content: center;
+    flex-grow: 1;
 }
 
 .visible-post
 {
     background-color: var(--bg);
     display: flex;
+    justify-self: center;
+    justify-content: center;
     flex-direction: column;    
     max-height: 40vh;
     gap: 1em;
@@ -87,4 +90,31 @@ p
     /* border-top: 1px solid black; */
 }
 
+@media (width < 1024px) {
+    .visible-post {
+        width: 60vw;
+        flex-shrink: 2;
+    }
+}
 
+@media (width < 768px) {
+    .visible-post{
+        width: 90vw;
+    }
+}
+
+@media (width < 425px) {
+    .visible-post-title {
+        font-size: 1em;
+    }
+}
+
+@media (width < 375px) {
+    .visible-post-title {
+        font-size: 0.8em;
+    }
+
+    .visible-post-desciption {
+        font-size: 0.7em;
+    }
+}
