@@ -9,6 +9,8 @@ import Auth from './Components/authentication/Auth';
 import SignUp from './Components/authentication/Signup';
 import PostDisplay from './Components/postDisplay/PostDisplay';
 import createPost from './Components/createPost/createPost';
+import Trending from './Components/Trending/Trending';
+import UserProfile from './Components/UserProfile/UserProfile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,13 +20,17 @@ root.render(
         <Route path={`/`} element={<App />}>
           <Route path="" element={<PostHome />} />
           <Route path={`Community-Profile`} element={<CommunityPageHeader />} />
+          <Route path='/trending' element={<Trending/>}/>
+          
           <Route path="PostDisplay" element={<PostDisplay />} />
+
         </Route>
         <Route path="/authentication" element={<Auth/>}>
           <Route path='sign-in' element={<Login/>}/>
           <Route path='sign-up' element={<SignUp/>}/>
         </Route>
         <Route path='/create-post' element={<createPost/>}/>
+        <Route path='/userProfile' element={<UserProfile/>}/>
       </Routes>
     </Router>
   </React.StrictMode>

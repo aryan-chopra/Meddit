@@ -4,12 +4,15 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getAuth } from 'firebase/auth';
 import PostDisplay from "../postDisplay/PostDisplay";
+import UserContext from "../../contexts/UserContext";
+
 
 
 function RightBar(){
   const [router, setRouter] = useState('')
   const location = useLocation();
   const [userEmail, setUserEmail] = useState(null);
+  
 
   useEffect(() => {
     if(location){
@@ -25,19 +28,23 @@ function RightBar(){
     }
   },[location])
   console.log(router);
+
+
     return(
       <div className='right-bar'>
-        {router == '/Community-Profile'? <AnnouncementBlock/> : <div><AccountStats username = {userEmail}/>
+        {router == '/Community-Profile'? <AnnouncementBlock/> : <div><AccountStats username = { userEmail}/>
         <Notifications/></div>}
       </div>
     )
   }
+
+
   
   function AccountStats({username}){
     return(
       <div className='account-container'>
         <AccountImageName imgSrc={'./resources/test_account_images/account_one.png'} name={username || 'Userrrrr' }/>
-        <AccountStatsContainer followers={'5K'} following={'2K'} posts={'100'}/>
+        <AccountStatsContainer followers={"20K"} following={"300"} posts={"20"}/>
       </div>
     )
   }

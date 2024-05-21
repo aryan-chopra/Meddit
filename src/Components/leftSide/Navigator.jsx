@@ -27,10 +27,19 @@ function NavContainer() {
      <DisplayPostsNavItem text={"Home"} imgsrc={"./resources/home.svg"} />
       
     </NavLink>
-      <DisplayPostsNavItem
-        text={"Trending"}
-        imgsrc={"./resources/trending.svg"}
-      />
+      <NavLink to="/trending" 
+    style={({isActive})=> {
+      return {
+        backgroundColor: isActive ? "var(--primary-100)" : "",
+        borderRadius: isActive ? "10px": "",
+        
+      };
+      
+    }}
+    >
+     <DisplayPostsNavItem text={"Trending"} imgsrc={"./resources/trending.svg"} />
+      
+    </NavLink>
       <DisplayPostsNavItem text={"For You"} imgsrc={"./resources/forYou.svg"} />
     </div>
   );
