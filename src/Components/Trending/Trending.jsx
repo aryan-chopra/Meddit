@@ -7,7 +7,7 @@ const Trending = () => {
   const { setCommunityMiddle, setCommunity } = useContext(UserContext);
   const communityData = [
     {
-      commImg: './resources/medical_icon.svg',
+      commImg: 'https://i.pinimg.com/564x/92/24/54/922454678fe34137ba14380c1726c81b.jpg',
       commName: 'Health Concerns Community',
       commTitle: 'Dealing with Chronic Migraines',
       commContent: 'I ve been experiencing chronic migraines for the past few months, and it s really impacting my daily life. The pain is unbearable at times, and I ve tried various treatments without much relief. Im reaching out to see if anyone else in this community has dealt with similar issues and if you have any advice or recommendations for managing chronic migraines.',
@@ -42,7 +42,7 @@ const Trending = () => {
       ]
     },
     {
-      commImg: './resources/medical_icon.svg',
+      commImg: 'https://i.pinimg.com/564x/92/24/54/922454678fe34137ba14380c1726c81b.jpg',
       commName: 'Heart Health Community',
       commTitle: 'Managing High Blood Pressure: Tips and Strategies',
       commContent: 'High blood pressure, or hypertension, is a common health issue that can lead to serious complications if not properly managed. Let\'s share our experiences and strategies for keeping blood pressure under control.',
@@ -77,7 +77,7 @@ const Trending = () => {
       ]
     },
     {
-      commImg: './resources/medical_icon.svg',
+      commImg: 'https://i.pinimg.com/564x/92/24/54/922454678fe34137ba14380c1726c81b.jpg',
       commName: 'Diabetes Support Group',
       commTitle: 'Living Well with Type 2 Diabetes',
       commContent: 'Type 2 diabetes requires careful management of blood sugar levels through diet, exercise, and medication. Let\'s share our tips and experiences for living well with diabetes.',
@@ -112,7 +112,7 @@ const Trending = () => {
       ]
     },
     {
-      commImg: './resources/medical_icon.svg',
+      commImg: 'https://i.pinimg.com/564x/92/24/54/922454678fe34137ba14380c1726c81b.jpg',
       commName: 'Cancer Support Community',
       commTitle: 'Living with Breast Cancer: My Journey',
       commContent: 'Being diagnosed with breast cancer can be overwhelming, but you\'re not alone. Let\'s share our stories, experiences, and support each other through this journey.',
@@ -147,7 +147,7 @@ const Trending = () => {
       ]
     },
     {
-      commImg: './resources/medical_icon.svg',
+      commImg: 'https://i.pinimg.com/564x/92/24/54/922454678fe34137ba14380c1726c81b.jpg',
       commName: 'Chronic Pain Warriors',
       commTitle: 'Living with Fibromyalgia: Coping Strategies',
       commContent: 'Fibromyalgia can have a significant impact on daily life, but there are ways to manage symptoms and improve quality of life. Let\'s share our coping strategies and support each other.',

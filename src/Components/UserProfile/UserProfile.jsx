@@ -1,11 +1,22 @@
 // UserProfile.js
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import UserContext from "../../contexts/UserContext";
 import Post from "../post_preview";
+import { getAuth } from 'firebase/auth';
 
 const UserProfile = () => {
   const [darkMode, setDarkMode] = useState(false);
-
+  const [user,setUser] = useState('');
+  useEffect(() => {
+    const auth = getAuth();
+    if (auth.currentUser) {
+      // User is signed in
+      setUser(auth.currentUser.email);
+    } else {
+      // No user is signed in
+      setUser(null);
+    }
+  },[])
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
@@ -47,7 +58,7 @@ const UserProfile = () => {
         </div>
 
         <div class="mt-20 text-center border-b pb-12">
-          <h1 class="text-4xl font-medium text-gray-700">Aryan</h1>
+          <h1 class="text-4xl font-medium text-gray-700">{user}</h1>
         </div>
       </div>
     </div>

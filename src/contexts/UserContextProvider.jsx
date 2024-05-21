@@ -4,7 +4,7 @@ import UserContext from "./UserContext";
 //isme children vo hoga jo jisme value pass ya access krni h
 const UserContextProvider = ({children})=>{
     const [community, setCommunity] = useState({commImg: '',commName: 'Community', commStats:''}); 
-    const [communityMiddle, setCommunityMiddle] = useState({commImg:'',commName:'Community',commTitle:'title',commContent:'content',commStats:'stats'})
+    const [communityMiddle, setCommunityMiddle] = useState({commImg:'',commName:'Community',commTitle:'title',commContent:'content',commStats:'stats',  comments:''})
     
     return (
 

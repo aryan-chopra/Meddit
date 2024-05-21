@@ -499,7 +499,8 @@ const PostHome = () => {
             commName: data.commName,
             commTitle: data.commTitle,
             commContent: data.commContent,
-            commStats: data.commStats
+            commStats: data.commStats,
+            comments: data.commComments
           });
           setCommunity({ commImg: '', commName: '', commStats: '' });
         }}>

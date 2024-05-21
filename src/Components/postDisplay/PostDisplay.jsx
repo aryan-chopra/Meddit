@@ -161,6 +161,7 @@ const PostDisplay = () => {
     };
   }, []);
 
+  console.log(communityMiddle)
   return (
     <div
       className={`main-container mx-5 my-5 p-4 border rounded-xl overflow-y-scroll ${
@@ -276,14 +277,9 @@ const PostDisplay = () => {
         </button>
       </div>
       <div className="comments mt-4">
-        <Comments />
-        <Comments />
-        <Comments />
-        <Comments />
-        <Comments />
-        <Comments />
-        <Comments />
-        <Comments />
+        <Comments commentName={"Alex"} commentImg={'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png'} commentContent={"Remember to take your medications as prescribed and attend regular check-ups with your healthcare provider."} commentTime={"2 days ago"} />
+        <Comments commentName={"Bran"} commentImg={'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg'} commentContent={"Remember to take your medications as prescribed and attend regular check-ups with your healthcare provider."} commentTime={"2 days ago"} />
+        <Comments commentName={"Shane"} commentImg={'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg'} commentContent={"Remember to take your medications as prescribed and attend regular check-ups with your healthcare provider."} commentTime={"2 days ago"} />
       </div>
     </div>
   );

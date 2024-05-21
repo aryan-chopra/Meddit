@@ -84,10 +84,11 @@
 
 import React, { useEffect, useState } from "react";
 
-const Comments = () => {
+const Comments = ({commentName,commentContent,commentTime,commentImg}) => {
   const [darkMode, setDarkMode] = useState(
     window.matchMedia("(prefers-color-scheme: dark)").matches
   );
+  console.log(commentName);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -109,21 +110,17 @@ const Comments = () => {
       <div className="header flex flex-row justify-between">
         <div className="leftSide-header flex flex-row gap-2 items-center">
           <img
-            src=""
+            src={commentImg}
             alt="avatar"
             className="w-[15px] h-[15px] rounded-full"
           />
-          <p className="text-xs">fnjf</p>
-          <p className="text-xs text-gray-500">2 years ago</p>
+          <p className="text-xs">{commentName}</p>
+          <p className="text-xs text-gray-500">{commentTime}</p>
         </div>
       </div>
       <div className="base mt-4">
         <p className="text-xs">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-          nostrum quisquam velit, omnis dignissimos nobis nam perferendis
-          veritatis asperiores saepe impedit architecto animi tempora eum
-          inventore recusandae possimus aperiam, eos accusamus iste! Natus
-          libero molestias consectetur repellendus deleniti explicabo possimus?
+          {commentContent}
         </p>
       </div>
       <div className="footer flex flex-row gap-3 mt-4">
