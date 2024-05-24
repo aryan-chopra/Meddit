@@ -21,7 +21,7 @@ const Signup = () => {
       console.log('Signup successful:', userCredential);
       // Update user profile with name (optional)
       // You can use Firebase Firestore or Realtime Database to save user profile details
-      navigate('/'); // Replace with your target path
+      navigate('/home'); // Replace with your target path
     } catch (error) {
       console.error('Signup error:', error);
       setError(error.message);
@@ -35,7 +35,7 @@ const Signup = () => {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
       console.log('Google Signup successful:', result);
-      navigate('/'); // Replace with your target path
+      navigate('/home'); // Replace with your target path
     } catch (error) {
       console.error('Google Signup error:', error);
       setError(error.message);

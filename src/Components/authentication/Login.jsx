@@ -17,7 +17,7 @@ const Login = () => {
       // Sign in using email and password with Firebase
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Login successful:", userCredential);
-      navigate("/"); // Navigate to the home page or desired route after successful login
+      navigate("/home"); // Navigate to the home page or desired route after successful login
     } catch (error) {
       console.error("Login error:", error);
       setError(error.message || "Failed to login. Please check your email and password.");
@@ -32,7 +32,7 @@ const Login = () => {
       // Sign in with Google using Firebase
       const result = await signInWithPopup(auth, provider);
       console.log("Google login successful:", result);
-      navigate("/"); // Navigate to the home page or desired route after successful login
+      navigate("/home"); // Navigate to the home page or desired route after successful login
     } catch (error) {
       console.error("Google login error:", error);
       setError(error.message || "Failed to login with Google.");
@@ -133,3 +133,4 @@ const Login = () => {
 };
 
 export default Login;
+

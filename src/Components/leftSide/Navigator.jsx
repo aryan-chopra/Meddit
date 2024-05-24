@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import UserContext from "../../contexts/UserContext";
 
 function Navigator() {
@@ -12,30 +12,49 @@ function Navigator() {
 }
 
 function NavContainer() {
+  const location = useLocation();
+  // useEffect(() => {
+  //   if(e.target.id == "home"){
+  //     document.getElementById("home").classList.add("bg-[#d5f6f2] rounded-lg");
+  //     document.getElementById("trending").classList.remove("bg-[#d5f6f2]");
+  //   }
+  //   else if(e.target.id == "trending"){
+  //     document.getElementById("trending").classList.add("bg-[#d5f6f2] rounded-lg");
+  //     document.getElementById("home").classList.remove("bg-[#d5f6f2]");
+  //   }
+  // },[])
+
   return (
     <div className="nav-item-container nav-tabs-container">
-      <NavLink to="/" 
-    style={({isActive})=> {
-      return {
-        backgroundColor: isActive ? "var(--primary-100)" : "",
-        borderRadius: isActive ? "10px": "",
+      <NavLink to="/home" 
+      id="home"
+      // onClick={(e) => {
+      //   if(location.pathname == "/home"){
+      //     e.currentTarget.classList.add("bg-[#d5f6f2] rounded-lg")
+      //   }
+      // }}
+    //   style={({isActive})=> {
+    //   return {
+    //     backgroundColor: isActive ? "var(--primary-100)" : "",
+    //     borderRadius: isActive ? "10px": "",
         
-      };
+    //   };
       
-    }}
+    // }}
     >
      <DisplayPostsNavItem text={"Home"} imgsrc={"./resources/home.svg"} />
       
     </NavLink>
-      <NavLink to="/trending" 
-    style={({isActive})=> {
-      return {
-        backgroundColor: isActive ? "var(--primary-100)" : "",
-        borderRadius: isActive ? "10px": "",
+      <NavLink to="/home/trending" 
+      id="trending"
+    // style={({isActive})=> {
+    //   return {
+    //     backgroundColor: isActive ? "var(--primary-100)" : "",
+    //     borderRadius: isActive ? "10px": "",
         
-      };
+    //   };
       
-    }}
+    // }}
     >
      <DisplayPostsNavItem text={"Trending"} imgsrc={"./resources/trending.svg"} />
       

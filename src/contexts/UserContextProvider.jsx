@@ -1,18 +1,41 @@
+// import React, { useState } from "react";
+// import UserContext from "./UserContext";
+ 
+// //isme children vo hoga jo jisme value pass ya access krni h
+// const UserContextProvider = ({children})=>{
+//     const [community, setCommunity] = useState({commImg: '',commName: 'Community', commStats:''}); 
+//     const [communityMiddle, setCommunityMiddle] = useState({commImg:'',commName:'Community',commTitle:'title',commContent:'content',commStats:'stats',  comments:''})
+    
+//     return (
+
+// //provider ke andr ek property milti hai value (provider ko jo dat pass krna ho kr skte ho)
+//         <UserContext.Provider value={{community, setCommunity,communityMiddle,setCommunityMiddle}}>
+//             {children};
+//         </UserContext.Provider>
+//     )
+// }
+
+// export default UserContextProvider
+
 import React, { useState } from "react";
 import UserContext from "./UserContext";
- 
-//isme children vo hoga jo jisme value pass ya access krni h
-const UserContextProvider = ({children})=>{
-    const [community, setCommunity] = useState({commImg: '',commName: 'Community', commStats:''}); 
-    const [communityMiddle, setCommunityMiddle] = useState({commImg:'',commName:'Community',commTitle:'title',commContent:'content',commStats:'stats',  comments:''})
-    
-    return (
 
-//provider ke andr ek property milti hai value (provider ko jo dat pass krna ho kr skte ho)
-        <UserContext.Provider value={{community, setCommunity,communityMiddle,setCommunityMiddle}}>
-            {children};
-        </UserContext.Provider>
-    )
-}
+const UserContextProvider = ({ children }) => {
+  const [user, setUser] = useState({
+    username: '',
+    email: '',
+    followersCount: 0,
+    followingCount: 0,
+    postCount: 0,
+  });
+  const [community, setCommunity] = useState({ commImg: '', commName: 'Community', commStats: '' });
+  const [communityMiddle, setCommunityMiddle] = useState({ commImg: '', commName: 'Community', commTitle: 'title', commContent: 'content', commStats: 'stats', comments: '' });
+  
+  return (
+    <UserContext.Provider value={{ user, setUser, community, setCommunity, communityMiddle, setCommunityMiddle }}>
+      {children}
+    </UserContext.Provider>
+  );
+};
 
-export default UserContextProvider
+export default UserContextProvider;

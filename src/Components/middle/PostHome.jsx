@@ -129,7 +129,7 @@
 // export default PostHome
 
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Post from '../post_preview';
 import { Link } from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
@@ -489,11 +489,19 @@ const PostHome = () => {
     },
     
   ];
+  // localStorage.setItem("communeData", JSON.stringify(communityData));
+  const [communeStateData, setCommuneStateData] = useState([]);
+  useEffect(() => {
+    const communeData = JSON.parse(localStorage.getItem("communeData"));
+    if(communeData){
+      setCommuneStateData(communeData)
+    }
+  },[])
   
   return (
     <div className='scrollable-div content'>
-      {communityData.map((data, index) => (
-        <Link to='/PostDisplay' key={index} onClick={() => {
+      {communeStateData.map((data, index) => (
+        <Link to='/home/PostDisplay' key={index} onClick={() => {
           setCommunityMiddle({
             commImg: data.commImg,
             commName: data.commName,

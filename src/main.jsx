@@ -11,19 +11,22 @@ import PostDisplay from './Components/postDisplay/PostDisplay';
 import CreatePost from './Components/createPost/createPost';
 import Trending from './Components/Trending/Trending';
 import UserProfile from './Components/UserProfile/UserProfile';
+import Loader from './Components/Loader/Loader';
+import Tyson from './Components/Tyson';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path={`/`} element={<App />}>
+        <Route path='/' element={<Tyson/>} />
+        <Route path={`/home`} element={<App />}>
           <Route path="" element={<PostHome />} />
           <Route path={`Community-Profile`} element={<CommunityPageHeader />} />
-          <Route path='/trending' element={<Trending/>}/>
+          <Route path='trending' element={<Trending/>}/>
           
           <Route path="PostDisplay" element={<PostDisplay />} />
-          <Route path="/createPost" element={<createPost/>}/>
+          <Route path="createPost" element={<createPost/>}/>
         </Route>
         <Route path="/authentication" element={<Auth/>}>
           <Route path='sign-in' element={<Login/>}/>
@@ -33,6 +36,7 @@ root.render(
         <Route path='/userProfile' element={<UserProfile/>}/>
       </Routes>
     </Router>
+    {/* <Loader/> */}
   </React.StrictMode>
 );
 
